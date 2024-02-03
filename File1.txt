@@ -1,0 +1,115 @@
+1. var message = 'number' + 3 + 3; 
+console.log(message) 
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+number33
+    // Рядок 'number'  p'lye'nmcz з першою трійкою, отримуємо 'number3' яке потім зєднується  з другою трійкою, отримуємо 'number33'
+
+
+2.var message = null + 3
+console.log(message) 
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+3
+   // 0+3=3
+
+3.var result = 5 && "qwerty";
+console.log(result);
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+qwerty
+   // логічний оператор && повертає значення другого істини, а так як 5 і стрічка qwerty є істинними то результатом виразу буде праве  значення.
+
+4.let result = '40' + +'2' + "hillel";
+console.log(result);
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+402hillel
+   // '40' - це рядок.+'2' - це унарний плюс перед рядком '2', що приводить його до числового типу.'40' + +'2' конкатенує рядок '40' з числом 2 і отримує рядок '402'.'402' + "hillel" рядок буде 402hillel
+
+5. var resultVar = '10' - 5 === 6;
+console.log(resultVar);
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+false
+  // '10' - це рядок.- 5 - це арифметична операція яка переводить рядок '10' у число, тому вираз '10' - 5 дає результат 5.5 === 6:так як 5 не дорівнює 6, вираз 5 === 6 повертає false.
+
+6.var boolResult = true + false;
+console.log(boolResult)
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+1
+   // Логічні значення в арифметичних операціях конвертуються в числа.1+0=1
+
+7.var resultVar = '4px' - 3;
+console.log(resultVar);\
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+NaN
+   // Віднімання рядок '4px' захоче перетворити  у число перед виконанням віднімання, результатом буде NaN 
+
+8.var resultVar = '4' - 3;
+console.log(resultVar);
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+1
+     // Віднімання рядок '4' перетворило в число (4-3=1)
+
+9. var strVar = '6';
+var resultVar = strVar + (3 ** 0);
+console.log(resultVar); 
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+61
+   // Число 3 до ступеня 0 дає 1.  '6' + 1 конкатенує рядок '6' з рядковим представленням числа 1, і отримується рядок '61'
+
+10. var resultVar = 12 / '6';
+console.log(resultVar);
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+2
+  // Рядок '6' автоматично перетворюється  у число під час арифметичної операції ділення, і результатом є число 2
+
+11. var resultVar = '10' + (5 === 6);
+console.log(resultVar); 
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+10false
+  // (5 === 6) повертає false, і потім рядок '10' зєднується з заченням false. '10false'.
+
+12. var resultVar = null == '';
+console.log(resultVar); 
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+false
+  // null конвертується до 0, порівняння 0 == '' є неправдивим, тобто false.
+
+13. var resultVar = 3 ** (9 / 3);
+console.log(resultVar); // Виведе 27 у консоль
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+27
+  // 9/3=3; 3 в третій степені = 27
+
+14. var resultVar = !!'false' == !!'true';
+console.log(resultVar); node test.js
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+true
+  // !!'false'=true; true == true, результатом буде true.
+
+15. var resultVar = 0 || '0' && 1;
+console.log(resultVar); 
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+1
+  // && (логічне "AND"): виконується логічне "AND" між '0' та 1 які є істинніми, тому результат - 1. || (логічне "OR"): виконується логічне "OR" який повертає перший істинний. Результат попередньої операції (1) є істинним, тому результат - 1.
+
+16. var resultVar = (+null == false) < 1;
+console.log(resultVar);
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+false
+  // +null конвертує null в число 0. 0 == false порівнюється. false конвертується в 0 -true.  true < 1.  true конвертується в 1,  1 < 1, - false.
+
+17. var resultVar = false && true || true;
+console.log(resultVar);
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+true
+   // false && true: AND повертає false, оскільки один false.  false || true: Or повертає true, оскільки true.
+
+18. var resultVar = false && (false || true);
+console.log(resultVar); 
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+false
+  // false || true = true. false && (false || true)= false.
+
+19.var resultVar = (+null == false) < 1 ** 5;
+console.log(resultVar);
+PS C:\Users\kh\Desktop\Навчання\JS\Lesson1> node test.js
+false
+// +null: 0. 0 == false:  false конвертується в 0, 0 == 0 = true. 1 ** 5 = 1. true < 1. 1 < 1 = false.
