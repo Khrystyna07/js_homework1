@@ -1,0 +1,21 @@
+function pow(x, y) {
+    let result = 1;
+        if (y > 0) {
+        for (let i = 1; i <= y; i++) {
+            result *= x;
+        }
+    } else if (y < 0) {
+        for (let i = 1; i <= -y; i++) {
+            result *= x;
+        }
+        result = 1 / result;
+    } else {
+        // Якщо степінь дорівнює 0, результат завжди 1
+        return 1;
+    }
+    return result;
+}
+let base = 2;
+let exponent = 3;
+let result = pow(base, exponent);
+console.log(`${base} в ступені ${exponent} дорівнює ${result}`);
