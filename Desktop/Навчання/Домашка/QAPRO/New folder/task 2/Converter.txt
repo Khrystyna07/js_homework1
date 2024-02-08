@@ -1,0 +1,29 @@
+let kilometers = 10;
+let quantityKilometers = 2; // Перша кількість
+
+if (!isNaN(kilometers) && !isNaN(quantityKilometers)) {
+    let meters = kilometers * 1000;
+    console.log(kilometers , " кілометрів дорівнює " , meters , " м.");
+} else {
+    console.log("Введіть кількість кілометрів");
+}
+
+let hours = 1; 
+let quantityHours = 2; // Друга кількість
+
+if (!isNaN(hours) && !isNaN(quantityHours)) {
+    let minutes = hours * 60;
+    console.log(hours , " год. дорівнює " , minutes , " хв.");
+} else {
+    console.log("Введіть кількість годин");
+}
+
+let kilograms = 1; 
+let quantityKilograms = 2; // Третя кількість
+
+if (!isNaN(kilograms) && !isNaN(quantityKilograms)) {
+    let grams = kilograms * 1000;
+    console.log(kilograms , " кг. дорівнює " , grams , " грм.");
+} else {
+    console.log("Введіть кількість кілограм");
+}
