@@ -1,0 +1,12 @@
+function pad(str, char, count, isStart) {
+  if (count <= str.length) {
+    return str; 
+  }
+
+  const diff = count - str.length;
+  const padStr = char.repeat(diff);
+
+  return isStart ? padStr + str : str + padStr;
+}
+
+console.log(pad('qwerty', '+', 6, true)); // Повинно повернути "qwerty", оскільки рядок вже має більше символів, ніж значення count.
