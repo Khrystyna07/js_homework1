@@ -1,0 +1,11 @@
+function isNaN(value) {
+    return value !== value;
+}
+
+let userInput = prompt("Введіть число:");
+console.log(`Введене число: ${userInput}`);
+
+let y = [5, "Hello", NaN, undefined, null];
+for (let i = 0; i < y.length; i++) {
+    console.log(`isNaN(${y[i]}) = ${isNaN(y[i])}`);
+}
