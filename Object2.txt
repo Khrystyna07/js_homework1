@@ -1,0 +1,48 @@
+var services = {
+   "haircut": "60 UAH",
+   "shaving": "80 UAH",
+   "Washing the head": "100 UAH",
+
+  price: function() {
+    let total = 0;
+    for (let service in this) {
+      if (typeof this[service] === 'string') {
+        total += parseInt(this[service].replace(' UAH', ''));
+      }
+    }
+    return total;
+  },
+
+  minPrice: function() {
+    let min = Infinity;
+    for (let service in this) {
+      if (typeof this[service] === 'string') {
+        let price = parseInt(this[service].replace('UAH', ''));
+        if (price < min) {
+          min = price;
+        }
+      }
+    }
+    return min;
+  },
+
+  maxPrice: function() {
+    let max = -Infinity;
+    for (let service in this) {
+      if (typeof this[service] === 'string') {
+        let price = parseInt(this[service].replace(' UAH', ''));
+        if (price > max) {
+          max = price;
+        }
+      }
+    }
+    return max;
+  }
+};
+
+services['Drying of the head'] = "200 UAH";
+
+
+console.log("Total cost of provided services: " + services.price() + " UAH");
+console.log("Minimum service cost: " + services.minPrice() + " UAH");
+console.log("The maximum cost of the service: " + services.maxPrice() + " UAH");
