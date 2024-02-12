@@ -1,0 +1,25 @@
+let obj = {
+  species: 'Dog',
+  breed: 'Labrador Retriever',
+  origin: 'Newfoundland, Canada',
+  breed_properties: {
+    temperament: 'Friendly',
+    size: 'Medium',
+  },
+  
+  getInfo: function() {
+    for (let key in this) {
+      if (typeof this[key] !== 'function') {
+        console.log(key + ': ' + this[key]);
+      }
+    }
+  }
+};
+
+console.log("Dog before update");
+obj.getInfo();
+
+obj.newProperty = 'weight: 40 kg'; 
+
+console.log("Dog after update");
+obj.getInfo();
