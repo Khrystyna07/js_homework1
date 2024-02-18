@@ -1,0 +1,18 @@
+function myBlend(arr) {
+    const sparseArray = {};
+    arr.forEach((element, index) => {
+        const randomIndex = Math.floor(Math.random() * (index + 1));
+        sparseArray[index] = sparseArray[randomIndex];
+        sparseArray[randomIndex] = element;
+    });
+    
+    const shuffledArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        shuffledArray.push(sparseArray[i]);
+    }
+    return shuffledArray;
+}
+
+const inputArray = prompt("Введіть масив:").split(",").map(Number);
+console.log("Введений масив:", inputArray);
+console.log("Перемішаний масив:", myBlend(inputArray));
